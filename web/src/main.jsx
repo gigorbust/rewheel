@@ -12,7 +12,12 @@ import { ExtrasPage } from "./routes/Extras"
 import { FlasherPage } from "./routes/Flasher"
 import { HomePage } from "./routes/Home"
 import { LivePage } from "./routes/Live/LivePage"
+
+import { handleGamepadInput } from './routes/Live/ControllerSupport.jsx';
+
+
 import { BackupPage } from "./routes/Backup"
+
 // import { OnboardingPage } from "./routes/Onboarding"
 import "./i18n"
 

@@ -8,3 +8,7 @@ if (navigator.getGamepads) {
       console.log("Gamepad disconnected:", e.gamepad);
     });
   }
+
+  export function handleGamepadInput(gamepad) {
+    // your gamepad logic here
+  }
