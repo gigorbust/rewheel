@@ -26,6 +26,7 @@ import {
   useRideMode,
   useRideTraits,
 } from "@hooks"
+import { handleGamepadInput } from './ControllerSupport.jsx'
 import FlashlightOffIcon from "@mui/icons-material/FlashlightOff"
 import FlashlightOnIcon from "@mui/icons-material/FlashlightOn"
 import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn"
