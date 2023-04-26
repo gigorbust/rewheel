@@ -84,7 +84,7 @@ export const RideBehavior = () => {
     valid: rideTraitsValid,
   } = useRideTraits(generation)
   let rideModes = []
-
+  
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
