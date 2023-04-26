@@ -1,0 +1,28 @@
+title: Données en direct
+subheader: Visualisez les données en direct et interagissez avec votre Onewheel
+noData: Pas de données
+actions:
+  showFactoryMode: Afficher le mode Usine
+battery:
+  title: La batterie
+  serialNumber: "Numéro de série: {{serialNumber}}"
+  stateOfCharge: État de charge
+factoryMode:
+  title: Mode Usine
+  inFactoryMode: En mode usine
+  notInFactoryMode: Pas en mode usine
+  instructions: Placez votre Onewheel sur une surface plane sans que la roue ne touche le sol. Lorsque vous êtes prêt, sélectionnez l'une des options ci-dessous.
+  motorCalibration: Étalonnage du moteur
+  motorCalibrationPre: Étalonnage du moteur (V1 / Plus)
+  hardReset: Re-jumeler le BMS + Calibrer l'angle d'inclinaison
+  actions:
+    enterFactoryMode: Entrer en mode usine
+rideBehavior:
+  title: Comportement de ride
+  lights: Lumières
+  simpleStop: Simple Stop
+  mode: Mode
+  customShaping:
+    carveability: Carvéabilité
+    angleOffset: Angla d'inclinaison
+    aggressiveness: Agressivité

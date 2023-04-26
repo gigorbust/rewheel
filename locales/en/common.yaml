@@ -1,0 +1,30 @@
+appName: Rewheel
+appDescription: Firmware modification tools for your Onewheel
+contribute: Contribute
+donate: Donate
+navigation:
+  backup: Backup
+  patch: Patch
+  flash: Flash
+  live: Live
+  extras: Extras
+  about: About
+notSupported:
+  title: Not Supported
+  subheader: Sorry, your browser doesn't support Web Bluetooth
+  browserSuggestion: Here's a list of <1>supported browsers</1>
+connectionManager:
+  connect: Connect
+  connecting: Connecting
+enforceGeneration:
+  featureNotSupported: This feature is not supported for your board
+warning: Warning
+needEncryptionKey: You need to save an encryption key to use this feature
+consent: I understand the risks. Please proceed.
+selectFirmware:
+  title: Select Firmware
+actions:
+  cancel: Cancel
+  confirm: Confirm
+board: Board
+selectYourBoard: Select your board

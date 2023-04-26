@@ -1,0 +1,25 @@
+appName: Rewheel
+appDescription: Firmware modifikationsværktøjer til dit Onewheel.
+navigation:
+  backup: Backup
+  patch: Patch
+  flash: Flash
+  live: Live
+  extras: Extra
+notSupported:
+  title: Ikke understøttet.
+  subheader: Undskyld, din browser understøtter ikke Web Bluetooth
+  browserSuggestion: Her er en liste af <1>undertstøttede browsere</1>
+connectionManager:
+  connect: Tilslut
+  connecting: Tilslutter
+enforceGeneration:
+  featureNotSupported: Denne funktion er ikke understøttet på dit board
+warning: Advarsel
+needEncryptionKey: Du skal gemme en krypteringsnøgle for at bruge denne funktion
+consent: Jeg forstår risiciene. Fortsæt.
+selectFirmware:
+  title: Vælg firmware
+actions:
+  cancel: Annuller
+  confirm: Bekræft

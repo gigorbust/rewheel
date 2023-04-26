@@ -1,0 +1,15 @@
+keyExtractor:
+  title: Nøgleudpakker
+  action: Udpak nøgle
+  encryptionKey: Krypteringsnøgle
+  saveKey: Gem krypteringsnøgle
+  failed: Kunne ikke finde krypteringsnøgle til dekryption
+  saved: Gemt krypteringsnøgle til dekryption
+otaConverter:
+  title: OTA konvertering
+  subheader: Konverter hardware dumpet firmware til en underskrevet firmware opdatering
+  downloadOTA: Hent OTA
+otaFinder:
+  title: Find OTA filer
+  subheader: Hent OTA opdateringer fra FM til patching
+  findUpdates: Find tilgængelige opdateringer

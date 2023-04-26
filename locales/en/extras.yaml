@@ -1,0 +1,20 @@
+keyExtractor:
+  title: Key Extractor
+  action: Extract Key
+  actionInProgress: Extracting...
+  encryptionKey: Encryption Key
+  encryptionIV: Initialization Vector
+  saveKey: Save Key
+  failed: Failed to find key for decryption
+  saved: Saved key for decryption
+otaConverter:
+  title: OTA Converter
+  subheader: Convert physically dumped firmware into a signed OTA update
+  confirmation: I understand that this is not meant for use with my backup file
+  downloadOTA: Download OTA
+otaFinder:
+  title: OTA Finder
+  subheader: Download OTA updates from FM for patching
+  findUpdates: Find available updates
+  selectDifferentBoard: Select different board
+  noUpdatesFound: There were no OTA updates found for your board

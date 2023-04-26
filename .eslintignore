@@ -1,0 +1,7 @@
+node_modules/
+vite.config.js
+.yarn/
+.vscode/
+.github/
+/**/dist/
+/**/node_modules/

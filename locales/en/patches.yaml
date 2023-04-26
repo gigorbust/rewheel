@@ -1,0 +1,107 @@
+clearSettings:
+  name: Clear Settings
+  description: Clears all settings from flash storage
+enableCustomShaping:
+  name: Enable Custom Shaping
+  description: Enables custom shaping for the Pint / GT
+removeBleHandshakeCheck:
+  name: Remove BLE Handshake Check
+  description: Removes Bluetooth LE handshake check before being able to communicate with a remote device (or app)
+removeBmsIDCheck:
+  name: Remove BMS ID Check
+  description: Allows you to use any BMS (disables Error 22 for incorrect serial ID)
+removeBmsOOB:
+  name: Remove BMS Out of Band Communication
+  description: Removes the BMS wireless communication that causes Error 24
+restoreData:
+  name: Restore Data
+  description: Restores the serial number and mileage of the Onewheel after flash has been wiped
+  args:
+    serialNumber:
+      name: Serial Number
+      description: The new serial number in the format OW123456
+    mileage:
+      name: Mileage
+      description: The mileage that the board has accumulated
+  errors:
+    invalidSerialNumberFormat: Invalid data as serial number. must be a string of the format OW123456
+    invalidSerialNumber: Invalid serial number - must be 6 digit number optionally preceded by OW
+    invalidMileage: Invalid mileage provided
+    newerFirmwareError: This strategy has not been updated to support newer firmware layouts
+changeElevatedAngle:
+  name: Change Elevated Angle
+  description: Changes the angle offset above level for Elevated
+  args:
+    elevatedAngle:
+      name: Angle
+      description: Angle above / below level for going forwards (up to +-10.00 degrees)
+    elevatedBackwardAngle:
+      name: Backward Angle
+      description: Angle above / below level for going backwards. Forward angle is used if not provided.
+  errors:
+    invalidAngle: "Invalid angle: {angle}. Must be between -10 and 10"
+    invalidBackwardAngle: "Invalid backward angle: {backwardAngle}. Must be between -10 and 10"
+changeDeliriumSkylineAngle:
+  name: Change Delirium / Skyline Angle
+  description: Changes the angle offset above level for Delirium / Skyline
+  args:
+    deliriumSkylineAngle:
+      name: Angle
+      description: Angle above / below level for going forwards (up to +-10.00 degrees)
+    deliriumSkylineBackwardAngle:
+      name: Backward Angle
+      description: Angle above / below level for going backwards. Forward angle is used if not provided.
+  errors:
+    invalidAngle: "Invalid angle: {angle}. Must be between -10 and 10"
+    invalidBackwardAngle: "Invalid backward angle: {backwardAngle}. Must be between -10 and 10"
+convertPintModeBehaviorToXR:
+  name: Convert Pint Mode Behavior to XR
+  description: Converts Pint riding mode behavior into the equivalent for the XR
+  confirmation: "Recommendation: Only use this patch if you have a higher capacity battery pack. Doing this on stock packs can cause unexpected / subtle nosedives."
+convertPintXModeBehaviorToXR:
+  name: Convert Pint X Mode Behavior to XR
+  description: Converts Pint X riding mode behavior into the equivalent for the XR
+  confirmation: "Recommendation: Only use this patch if you have a higher capacity battery pack. Doing this on stock packs can cause unexpected / subtle nosedives."
+setAngleOffset:
+  name: Set Angle Offset
+  description: Sets the angle offset for the board for all modes (e.g. virtual tilt kit)
+  args:
+    angleOffset:
+      name: Angle Offset
+      description: Angle offset that should be considered level
+  errors:
+    notANumber: Angle offset must be a number
+    negativeValueNewerFirmware: Negative angle offsets are not currently supported for newer firmware
+    outOfRange: Angle offsets are limited to < 10 degrees until further testing
+setTopSpeed:
+  name: Set Top Speed
+  description: Sets the top speed before pushback
+  confirmation: "Recommendation: Only use this patch if you have a higher capacity battery pack. Doing this on stock packs can cause subtle pushback / unexpected nosedives."
+  args:
+    topSpeed:
+      name: Top Speed
+      description: "Top speed. Range (900 - 2500). Defaults: Pint - 1290, XR - 1333, Pint X - 1462, GT - 1720"
+  errors:
+    notANumber: Invalid top speed value
+    outOfRange: Top speed out of accepted range
+spoofAsXR:
+  name: Spoof Board as XR
+  description: Have the board appear as an XR inside of the app for easy access to custom shaping settings
+estimateSoc:
+  name: Rescale State of Charge
+  description: Rescales battery readings for higher capacity battery packs
+  confirmation: "Recommendation: Only use this patch if you have a higher capacity battery pack. There is no reason for a stock battery pack to need this."
+  args:
+    batteryCapacityMah:
+      name: Battery Capacity
+      description: Your battery capacity measured in milliamp-hours (mAh)
+  errors:
+    notANumber: Invalid battery capacity value
+    outOfRange: Battery capacity out of accepted range
+remoteTilt:
+  name: Remote Tilt
+  description: Let's you use ReWheel or a custom app to change the angle of your board while riding
+gtShapingBoost:
+  name: Boost Custom Shaping
+  description: Increases the sensitivity and maximum values of custom shaping
+

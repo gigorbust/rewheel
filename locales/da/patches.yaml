@@ -1,0 +1,85 @@
+clearSettings:
+  name: Ryd indstillinger
+  description: Rydder alle indstillinger fra flash-lagring
+enableCustomShaping:
+  name: Aktiver Custom Shaping
+  description: Gør custom shaping muligt på din Pint / på din GT
+removeBleHandshakeCheck:
+  name: Fjern BLE håndtryk Tjek
+  description: Fjerner Bluetooth LE håndtryk tjek før du kan kommunikere med en app
+removeBmsIDCheck:
+  name: Fjern BMS ID tjek
+  description: Gør så du kan bruge andre BMS'er. (fjerner fejl 22 for forkert ID)
+removeError16:
+  name: Fjern fejl 16
+  description: Fjerner fejl 16
+restoreData:
+  name: Restorer Data
+  description: Restorerer serienummer og kilometertal efter flash er blevet slettet
+  args:
+    serialNumber:
+      name: Serienummer
+      description: Det nye serienummer i formatet OW123456
+    mileage:
+      name: Kilometertal
+      description: Hvor langt boardet har kørt
+  errors:
+    invalidSerialNumberFormat: Ugyldig data som serienummer. Skal være i formatet OW123456
+    invalidSerialNumber: Ugyldigt serienummer - skal være et 6-cifret nummer eventuelt forud for OW
+    invalidMileage: Ugyldigt Kilometertal
+    newerFirmwareError: Denne strategi er ikke blevet opdateret til at understøtte nyere firmwarelayouts
+changeElevatedAngle:
+  name: Skift Elevated vinkel
+  description: Ændrer vinkelforskydningen over niveau for Elevated
+  args:
+    elevatedAngle:
+      name: Vinkel
+      description: Vinkel over / under niveau for at køre fremad (op til +-10,00 grader)
+    elevatedBackwardAngle:
+      name: Baglæns vinkel
+      description: Vinkel over / under niveau for at gå baglæns. Fremadgående vinkel bruges, hvis den ikke er angivet.
+  errors:
+    invalidAngle: "Ugyldig vinkel: {angle}. Skal være mellem -10 og 10"
+    invalidBackwardAngle: "Ugyldig baglænsvinkel: {backwardAngle}. Skal være mellem -10 og 10"
+changeDeliriumSkylineAngle:
+  name: Skift Delirium / Skyline vinkel
+  description: Ændrer vinkelforskydningen over niveau for Delirium / Skyline
+  args:
+    deliriumSkylineAngle:
+      name: Vinkel
+      description: Vinkel over / under niveau for at gå fremad (op til +-10,00 grader)
+    deliriumSkylineBackwardAngle:
+      name: Baglæns Vinkel
+      description: Vinkel over / under niveau for at køre baglæns. Fremadgående vinkel bruges, hvis den ikke er angivet.
+  errors:
+    invalidAngle: "Ugyldig vinkel: {angle}. Skal være mellem -10 og 10"
+    invalidBackwardAngle: "Ugyldig baglænsvinkel: {backwardAngle}. Skal være mellem -10 og 10"
+convertPintModeBehaviorToXR:
+  name: Konverter Pint adfærd til XR
+  description: Konverterer Pint-køretilstand til det, der svarer til XR
+  confirmation: "Anbefaling: Brug kun denne patch, hvis du har en batteripakke med højere kapacitet. At gøre dette på det normale batteri kan foråsage uventede nosedives."
+convertPintXModeBehaviorToXR:
+  name: Konverter Pint X adfærd til XR
+  description: Konverterer Pint X køretilstand til det, der svarer til XR
+setAngleOffset:
+  name: Indstil vinkelforskydning
+  description: Indstiller vinkelforskydningen på boardet for alle tilstande (f.eks. virtuelt tilt kit)
+  args:
+    angleOffset:
+      name: Vinkelforskydning
+      description: Vinkelforskydning, der skal betragtes som jævnt
+  errors:
+    notANumber: Vinkelforskydning skal være et nummer
+    negativeValueNewerFirmware: Negative vinkelforskydninger understøttes i øjeblikket ikke for nyere firmware
+    outOfRange: Vinkelforskydninger er begrænset til < 10 grader indtil yderligere test
+setTopSpeed:
+  name: Indstil tophastighed
+  description: Indstiller hastigheden før pushback
+  confirmation: "Anbefaling: Brug kun denne patch, hvis du har en batteripakke med højere kapacitet. At gøre dette på det normale batteri kan foråsage uventede nosedives."
+  args:
+    topSpeed:
+      name: Tophastighed
+      description: "Tophastighed. Rækkevidde (900 - 2000). Standardindstillinger: Pint - 1290, XR - 1333, Pint X - 1462"
+  errors:
+    notANumber: Ugyldig tophastighedsværdi
+    outOfRange: Tophastighed uden for accepteret rækkevide

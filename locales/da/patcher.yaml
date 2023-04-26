@@ -1,0 +1,18 @@
+notSupported:
+  noFirmwareMatch: Der var ingen match for dit firmware. Hvis du gerne vil have det understøttet, så <1>åben eller upvote</1> et forslag i Rewheel repositoriet
+  tryAgainAction: Prøv andet firmware
+patch_one: "{{count}} patch"
+patch_other: "{{count}} patches"
+appliedPatchSuccess: "Anvendte $t(patch, {{count}})"
+appliedPatchWarning: 'Anvendte $t(patch, {"count": {{applied}} }). Skippede $t(patch, {"count": {{skipped}} }). ({{patches}}). Klar til download'
+appliedPatchNone: Ingen gyldige patches anvendt
+availablePatches: Tilgængelige patches
+experimental:
+  title: Experimentel
+  message: Denne patch er eksperimentel og kan bricke dit board.
+confirm:
+  title: Godkend patch
+  message: Godkend venligst at du gerne vil tilføje denne patch
+applyPatchesAction: Anvend patches
+encryptFirmware: Krypter firmware
+downloadFirmware: Hent firmware

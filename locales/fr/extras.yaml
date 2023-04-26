@@ -1,0 +1,15 @@
+keyExtractor:
+  title: Extracteur de clé
+  action: Extraire la clé
+  encryptionKey: Clé de cryptage
+  saveKey: Enregistrer la clé
+  failed: Impossible de trouver la clé pour le déchiffrement
+  saved: Clé enregistrée pour le déchiffrement
+otaConverter:
+  title: Convertisseur OTA
+  subheader: Convertir le firmware matériel vidé en une mise à jour OTA signée
+  downloadOTA: Télécharger l'OTA
+otaFinder:
+  title: Recherche d'OTA
+  subheader: Téléchargez les mises à jour d'OTA de FM pour faire des patchs
+  findUpdates: Rechercher les mises à jour disponibles

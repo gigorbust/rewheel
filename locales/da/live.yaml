@@ -1,0 +1,28 @@
+title: Live data 
+subheader: Se live data og interager med dit Onewheel
+noData: Ingen data
+actions:
+  showFactoryMode: Vis fabrikstilstand
+battery:
+  title: Batteri
+  serialNumber: "Serienummer: {{serialNumber}}"
+  stateOfCharge: Ladetilstand
+factoryMode:
+  title: Fabrikstilstand
+  inFactoryMode: I fabrikstilstand
+  notInFactoryMode: Ikke i fabrikstilstand
+  instructions: Placer dit onewheel på en jævn overflade uden hjulet berører jorden. Når du er klar, skal du vælge en af mulighederne nedenfor.
+  motorCalibration: Motorkalibration
+  motorCalibrationPre: Motorkalibration (V1 / Plus)
+  hardReset: Ompar BMS + Kalibrer Offset
+  actions:
+    enterFactoryMode: Aktiver fabrikstilstand
+rideBehavior:
+  title: Kørselsadfærd
+  lights: Lys
+  simpleStop: SimpleStop
+  mode: Tilstand
+  customShaping:
+    carveability: Carveabilitet
+    angleOffset: Vinkel offset
+    aggressiveness: Aggressivtet

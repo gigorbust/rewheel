@@ -1,0 +1,15 @@
+title: "Flash Firmware"
+subheader: "Flash OTA updates to your Onewheel"
+startUpdate: Start Update
+retryUpdate: Retry Update
+updating: Updating...
+updateError: Update Error
+updateComplete:
+  title: Update Complete
+  message1: Please wait while your board verifies the update and reboots.
+  message2: If your board hasn't rebooted after a minute, you might need to do manual board recovery. Refer to this <1>video</1>.
+warningMessage1: Flashing the incorrect firmware can brick your board. Please make sure you've selected firmware that is valid for your board.
+warningMessage2: ⚠️ It is not recommended to use this tool for anything other than the Onewheel Pint or GT at this time. (no Pint Xs)
+flashAction: Flash Update
+timeoutError: Connection to the Onewheel timed out
+updateErrorMessage: Update Error - {{error}}

@@ -1,0 +1,29 @@
+title: Live Data
+subheader: View live data and interact with your Onewheel
+noData: No Data
+actions:
+  showFactoryMode: Show Factory Mode
+battery:
+  title: Battery
+  serialNumber: "Serial Number: {{serialNumber}}"
+  stateOfCharge: State of Charge
+factoryMode:
+  title: Factory Mode
+  inFactoryMode: In factory mode
+  notInFactoryMode: Not in factory mode
+  instructions: Place your Onewheel on a level surface without the wheel touching the ground. When ready, select one of the options below.
+  motorCalibration: Motor Calibration
+  motorCalibrationPre: Motor Calibration (V1 / Plus)
+  hardReset: Re-pair BMS + Calibrate Offset
+  actions:
+    enterFactoryMode: Enter Factory Mode
+rideBehavior:
+  title: Ride Behavior
+  lights: Lights
+  simpleStop: Simple Stop
+  mode: Mode
+  customShaping:
+    carveability: Carveability
+    angleOffset: Angle Offset
+    aggressiveness: Aggressiveness
+    remoteTilt: Remote Tilt

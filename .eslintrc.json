@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  }
+}

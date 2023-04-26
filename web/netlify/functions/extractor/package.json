@@ -1,0 +1,11 @@
+{
+  "name": "@rewheel/functions-extractor",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Nishanth Samala <hey@outlandnish.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

@@ -1,0 +1,30 @@
+title: Firmware Backup
+disconnectedSubheader: Dump your Onewheel bootloader and settings
+connectedSubheader: "{{board}} ({{hardwareRevision}}) / Firmware {{firmwareRevision}}"
+loadingExtractor: Loading extractor...
+unableToLoadExtractor: Unable to load extractor
+unableToDetermineBoard: Unable to determine board. Please select below
+confirmation:
+  title: Confirm OTA Firmware
+  subtitle: Please confirm you have a valid OTA update file before you continue
+  description: Because FM no longer hosts valid OTA updates, you will need to confirm you have a valid OTA file to return to before proceeding with the backup. Otherwise, your board will be bricked and unusable.
+  haltBackup: Sorry, you cannot continue backup at this time. You will need a valid OTA file before you can proceed.
+dumper:
+  extractor: Extractor
+  flashExtractor: Flash Extractor
+  skipFlash: Skip Flash
+  dumpWarning1: Flashing the extractor will make your Onewheel inoperable until you flash an OTA update to it. This works by flashing custom firmware and will brick your Onewheel temporarily.
+  dumpWarning2: Do not do this unless you have tested an OTA update before and your board still works.
+  dumpBootloader: Dump Bootloader
+  dumpSettings: Dump Settings
+  reboot: Reboot
+  download: Download
+  restarted: Restarted
+  restartMessage: Restart command sent. Power cycle your board, and then go back to the flash page to flash an OTA update to restore your board functionality.
+  extracting: Extracting...
+decrypt:
+  title: Decrypt Firmware
+  subheader: Use the key from your Onewheel to decrypt the firmware
+  key: Encryption Key
+  action: Decrypt
+  invalidKey: Invalid decryption key supplied

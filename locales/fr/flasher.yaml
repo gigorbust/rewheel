@@ -1,0 +1,15 @@
+title: "Flasher le Firmware"
+subheader: "Flasher les mises à jour OTA sur votre Onewheel"
+startUpdate: Démarrer la mise a jour
+retryUpdate: Réessayer la mise à jour
+updating: Mise à jour...
+updateError: Erreur de mise à jour
+updateComplete:
+  title: Mise à jour terminée
+  message1: Veuillez patienter pendant que votre board vérifie la mise à jour et redémarre.
+  message2: Si votre board n'a pas redémarré après une minute, vous devrez peut-être effectuer une récupération manuelle de la board. Référez-vous à cette <1>vidéo</1>.
+warningMessage1: Le fait de flasher le firmware incorrect peut bloquer votre board. Veuillez vous assurer que vous avez sélectionné un firmware valide pour votre board.
+warningMessage2: ⚠️ Il n'est pas recommandé d'utiliser cet outil pour autre chose que le Onewheel Pint pour le moment. (pas de pinte X)
+flashAction: Flasher la mise à jour
+timeoutError: La connexion au Onewheel a expiré
+updateErrorMessage: Erreur de mise à jour - {{error}}

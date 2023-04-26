@@ -1,0 +1,15 @@
+title: "Flash Firmware"
+subheader: "Flash OTA opdateringer til dit Onewheel" 
+startUpdate: Start opdatering
+retryUpdate: Prøv opdatering igen
+updating: Opdaterer...
+updateError: Opdateringsfejl
+updateComplete:
+  title: Opdatering gennemført
+  message1: Vent venligst, mens dit board verificerer opdateringen og genstarter.
+  message2: Hvis dit board ikke har genstartet efter et minut, skal du muligvis lave en manuel board genopretning. Se denne <1>video</1> 
+warningMessage1: Hvis du flasher det forkerte firmware, kan det bricke dit board. Vær sikker på, at du har valgt det firmware der passer til dit board.
+warningMessage2: ⚠️Det er ikke anbefalet at bruge dette værktøj til andet end Onewheel Pint indtil videre. (Ikke nogle Pint X'ere)
+flashAction: Flash opdatering
+timeoutError: Forbindelse til Onewheel mistet
+updateErrorMessage: Opdateringsfejl - {{error}}

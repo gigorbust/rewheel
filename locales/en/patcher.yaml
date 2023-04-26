@@ -1,0 +1,23 @@
+notSupported:
+  noFirmwareMatch: There was no match for your firmware. If you'd like it supported, please <1>open or upvote</1> an issue in the Rewheel repository.
+  tryAgainAction: Try other firmware
+decrypt:
+  title: Decrypt Firmware
+  subheader: Key required to decrypt OTA updates. Please use the Key Extractor on the Extras page.
+patch_one: "{{count}} patch"
+patch_other: "{{count}} patches"
+appliedPatchSuccess: "Applied $t(patch, {{count}})"
+appliedPatchWarning: 'Applied $t(patch, {"count": {{applied}} }). Skipped $t(patch, {"count": {{skipped}} }). ({{patches}}). Ready for download'
+appliedPatchNone: No valid patches applied
+availablePatches: Available Patches
+experimental:
+  title: Experimental
+  message: This patch is experimental and has the potential to brick your board.
+confirm:
+  title: Confirm Patch
+  message: Please confirm you want to add this patch
+applyPatchesAction: Apply Patches
+encryptFirmware: Encrypt Firmware
+downloadFirmware: Download Firmware
+byline: By
+sponsor: "Sponsor"

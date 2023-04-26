@@ -1,0 +1,27 @@
+appName: Rewheel
+appDescription: Outils de modification du firmware pour votre Onewheel
+contribute: Contribuer
+donate: Faire un don
+navigation:
+  backup: Sauvegarde
+  patch: Patch
+  flash: Flash
+  live: Live
+  extras: Extras
+notSupported:
+  title: Non supporté
+  subheader: Désolé, votre navigateur ne prend pas en charge le Web Bluetooth
+  browserSuggestion: Voici une liste des <1>navigateurs supportés</1>
+connectionManager:
+  connect: Connect
+  connecting: Connecting
+enforceGeneration:
+  featureNotSupported: Cette fonctionnalité n'est pas prise en charge pour votre board
+warning: Avertissement
+needEncryptionKey: Vous devez enregistrer une clé de chiffrement pour utiliser cette fonctionnalité
+consent: Je comprends les risques. S'il vous plait continuez.
+selectFirmware:
+  title: Sélectionnez le Firmware
+actions:
+  cancel: Annuler
+  confirm: Confirmer

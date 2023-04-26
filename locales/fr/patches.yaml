@@ -1,0 +1,85 @@
+clearSettings:
+  name: Effacer les paramètres
+  description: Efface tous les paramètres enregistrés pendant le flashage
+enableCustomShaping:
+  name: Enable Custom Shaping
+  description: Activer le custom shaping de la Pint ou de la GT
+removeBleHandshakeCheck:
+  name: Supprimer le BLE Handshake Check
+  description: Supprime le Bluetooth LE handshake check avant de pouvoir communiquer avec un appareil distant (ou une application)
+removeBmsIDCheck:
+  name: Supprimer le BMS ID Check
+  description: Vous permet d'utiliser n'importe quel BMS (désactive l'erreur 22 pour un ID de série incorrect)
+removeError16:
+  name: Supprimer l'Error 16
+  description: Supprime l'Error 16
+restoreData:
+  name: Restaurer les données
+  description: Restaure le numéro de série et le kilométrage du Onewheel après que le flash a été effacé
+  args:
+    serialNumber:
+      name: Numéro de série
+      description: Le nouveau numéro de série au format OW123456
+    mileage:
+      name: Kilométrage
+      description: Le kilométrage que la planche a accumulé
+  errors:
+    invalidSerialNumberFormat: Données invalides comme numéro de série. Il doit être une chaîne au format OW123456
+    invalidSerialNumber: Numéro de série non valide - doit être un numéro à 6 chiffres éventuellement précédé de OW
+    invalidMileage: Le Kilométrage fourni est invalide
+    newerFirmwareError: Cette stratégie n'a pas été mise à jour pour prendre en charge les nouvelles mises en page du firmware
+changeElevatedAngle:
+  name: Modifier l'angle d'inclinaison pour le mode Elevated
+  description: Change l'inclinaison au dessus du niveau pour le mode Elevated
+  args:
+    elevatedAngle:
+      name: Angle
+      description: Angle au dessus / en dessous du niveau pour avancer (jusqu'à +-10.00 degrés)
+    elevatedBackwardAngle:
+      name: Angle arrière
+      description: Angle au dessus / en dessous du niveau pour reculer. L'angle pour avancer est utilisé s'il n'est pas fourni.
+  errors:
+    invalidAngle: "Angle invalide: {angle}. Il doit être entre -10 et 10"
+    invalidBackwardAngle: "Angle arrière invalide: {backwardAngle}. IL doit être entre -10 et 10"
+changeDeliriumSkylineAngle:
+  name: Changer l'angle du mode Delirium / Skyline
+  description: Change l'inclininaison pour le mode Delirium / Skyline
+  args:
+    deliriumSkylineAngle:
+      name: Angle
+      description: Angle au dessus / en dessous du niveau pour avancer (jusqu'à +-10.00 degrés)
+    deliriumSkylineBackwardAngle:
+      name: Angle arrière
+      description: Angle au dessus / en dessous du niveau pour reculer. L'angle pour avancer est utilisé s'il n'est pas fourni.
+  errors:
+    invalidAngle: "Angle invalide: {angle}. Il doit être entre -10 et 10"
+    invalidBackwardAngle: "Angle arrière invalide: {backwardAngle}. IL doit être entre -10 et 10"
+convertPintModeBehaviorToXR:
+  name: Convertir le comportement du mode Pint en XR
+  description: Convertit le comportement du mode de ride Pint en équivalent XR
+  confirmation: "Recommandation : n'utilisez ce patch que si vous disposez d'une batterie de plus grande capacité que celle d'origine. Faire cela avec une batterie de base peut provoquer des nosedives inattendus à cause du plus pushback subtil."
+convertPintXModeBehaviorToXR:
+  name: Convertir le comportement du mode Pint X en XR
+  description: Convertit le comportement du mode de ride Pint X en équivalent XR
+setAngleOffset:
+  name: Définir l'angle d'inclinaison
+  description: Défini l'angle d'inclinaison pour tous les modes (tilt kit virtuel)
+  args:
+    angleOffset:
+      name: Décalage angulaire
+      description: Décalage angulaire qui doit être considéré comme le niveau
+  errors:
+    notANumber: Le décalage angulaire doit être un nombre
+    negativeValueNewerFirmware: Les décalages angulaires négatifs ne sont pas supportés par les firmware les plus récents
+    outOfRange: Les décalages angulaires sont limités doivent être inférieur à 10 degrés pour l'instant
+setTopSpeed:
+  name: Définir la Vitesse Maximale
+  description: Définit la vitesse maximale avant le pushback
+  confirmation: "Recommandation : n'utilisez ce patch que si vous disposez d'une batterie de plus grande capacité que celle d'origine. Faire cela avec une batterie de base peut provoquer des nosedives inattendus à cause du plus pushback subtil."
+  args:
+    topSpeed:
+      name: Vitesse Maximale
+      description: "Vitesse de pointe. Plage (900 - 2000). Par défaut : Pint - 1290, XR - 1333, Pint X - 1462"
+  errors:
+    notANumber: Valeur de vitesse maximale invalide
+    outOfRange: Vitesse maximale hors de la plage acceptée

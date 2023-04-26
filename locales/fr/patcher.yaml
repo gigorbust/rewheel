@@ -1,0 +1,23 @@
+notSupported:
+  noFirmwareMatch: Il n'y avait pas de correspondance pour votre firmware. Si vous souhaitez qu'il soit pris en charge, veuillez <1>ouvrir ou voter pour</1> un problème dans le dépôt Rewheel.
+  tryAgainAction: Essayer un autre firmware
+decrypt:
+  title: Décrypter le Firmware
+  subheader: Clé requise pour décrypter les mises à jour OTA
+  key: Clé de cryptage
+  action: Décrypter
+patch_one: "{{count}} patch"
+patch_other: "{{count}} patches"
+appliedPatchSuccess: "Applied $t(patch, {{count}})"
+appliedPatchWarning: 'Applied $t(patch, {"count": {{applied}} }). Skipped $t(patch, {"count": {{skipped}} }). ({{patches}}). Prêt pour le téléchargement'
+appliedPatchNone: Aucun patch valide appliqué
+availablePatches: Patches disponibles
+experimental:
+  title: Expérimental
+  message: Ce patch est expérimental et a le potentiel de bloquer votre board.
+confirm:
+  title: Confirmer le patch
+  message: Veuillez confirmer que vous souhaitez ajouter ce patch
+applyPatchesAction: Appliquer les Patches
+encryptFirmware: Encoder le Firmware
+downloadFirmware: Télécharger le Firmware

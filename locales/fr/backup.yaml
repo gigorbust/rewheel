@@ -1,0 +1,27 @@
+title: Sauvegarde du firmware
+disconnectedSubheader: Videz le chargeur de démarrage et des paramètres du Onewheel
+connectedSubheader: "{{board}} ({{hardwareRevision}}) / Firmware {{firmwareRevision}}"
+loadingExtractor: Chargement de l'extracteur...
+unableToLoadExtractor: Impossible de charger l'extracteur
+unableToDetermineBoard: Impossible de déterminer la board. Veuillez la sélectionner ci-dessous
+board: Board
+selectYourBoard: Sélectionnez votre board
+dumper:
+  extractor: Extracteur
+  flashExtractor: Flasher l'extracteur
+  skipFlash: Ignorer le Flashage
+  dumpWarning1: Le fait de flasher l'extracteur rendra votre Onewheel inutilisable jusqu'à ce que vous lui fassiez une mise à jour OTA. Cela fonctionne en flashant le firmware personnalisé et votre Onewheel sera temporairement bloqué.
+  dumpWarning2: Ne faites pas cela sauf si vous avez déjà testé une mise à jour OTA et que votre board fonctionne toujours.
+  dumpBootloader: Vider le chargeur de démarrage
+  dumpSettings: Paramètres de vidage
+  reboot: Redémarrer
+  download: Télécharger
+  restarted: Redémarré
+  restartMessage: Commande de redémarrage envoyée. Éteignez et rallumez votre board, puis revenez à la page flash pour flasher une mise à jour OTA afin de restaurer la fonctionnalité de votre board.
+  extracting: Extraction...
+decrypt:
+  title: Décryptage du firmware
+  subheader: Utilisez la clé de votre Onewheel pour décrypter le firmware
+  key: Clé de cryptage
+  action: Décrypter
+  invalidKey: Clé de déchiffrement fournie invalide

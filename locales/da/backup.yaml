@@ -1,0 +1,27 @@
+title: Backup af firmware
+disconnectedSubheader: Dump din Onewheel bootloader og indstillinger
+connectedSubheader: "{{board}} ({{hardwareRevision}}) / Firmware {{firmwareRevision}}"
+loadingExtractor: Indlæser udpakker...
+unableToLoadExtractor: Kunne ikke indlæse udpakker
+unableToDetermineBoard: Kunne ikke identificere board. Vælg venligst nedenunder
+board: Board
+selectYourBoard: Vælg dit board
+dumper:
+  extractor: Udpakker
+  flashExtractor: Flash udpakker
+  skipFlash: Spring over flash
+  dumpWarning1: At flashe ekstraktoren gør dit Onewheel ubrugeligt indtil du flasher en OTA opdatering til den. Dette virker ved at flashe brugerdefineret firmware og bricker dit board midlertidigt. 
+  dumpWarning2: Gør ikke dette med mindre du har testet en OTA opdatering før, og dit board stadigvæk virker.
+  dumpBootloader: Dump bootloader
+  dumpSettings: Dump indstillinger
+  reboot: Genstart
+  download: Hent
+  restarted: Genstartet
+  restartMessage: Genstart kommando sendt. Sluk og tænd for dit board, så gå tilbage til flash siden for at flashe en OTA opdatering for at gendanne funktionalitet af dit board.
+  extracting: Udpakker...
+decrypt:
+  title: Dekrypter firmware
+  subheader: Brug krypteringsnøglen fra dit Onewheel til at dekryptere firmwaret.
+  key: Krypteringsnøgle
+  action: Dekrypter
+  invalidKey: Ugyldig krypteringsnøgle
