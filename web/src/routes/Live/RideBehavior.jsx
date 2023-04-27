@@ -87,17 +87,28 @@ export const RideBehavior = () => {
   let gamepadIndex;
   var refreshIntervalID = null;
 
+
+  var applyDeadzone = function(number, threshold){
+    percentage = (Math.abs(number) - threshold) / (1 - threshold);
+ 
+    if(percentage < 0)
+       percentage = 0;
+ 
+    return percentage * (number > 0 ? 1 : -1);
+  }
+
   ////
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
+
     });
 
     refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
-        setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+        setAngleOffset(-(((applyDeadzone(myGamepad.axes[1], 0.25)) * 30 )/ 10), true);
       }
       
     }, 100)
