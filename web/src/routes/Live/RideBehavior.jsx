@@ -84,7 +84,7 @@ export const RideBehavior = () => {
     valid: rideTraitsValid,
   } = useRideTraits(generation)
   let rideModes = []
-  let gamepadIndex = undefined;
+  let gamepadIndex;
 ///
   const [refreshIntervalID, setRefreshIntervalID] = useState(null)
 
