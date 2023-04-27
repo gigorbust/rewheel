@@ -85,6 +85,7 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
+  let refreshIntervalID;
   
   ////
   const enableGamePad = () => {
@@ -93,7 +94,7 @@ export const RideBehavior = () => {
       disableGamePad()
     });
 
-    var refreshIntervalID = setInterval(() => {
+    refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
