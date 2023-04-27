@@ -97,7 +97,11 @@ export const RideBehavior = () => {
       console.log("Lost connection with the gamepad.");
       gamepadIndex = null;
       setRefreshIntervalID(null);
+      clearInterval(refreshIntervalID)
     })
+    if (gamepadIndex !== undefined){
+      startInterval(gamepadIndex);
+    }
   }
 
   const startInterval = (gamepadIndex) => {
@@ -111,16 +115,18 @@ export const RideBehavior = () => {
   }
 
   const disableGamePad = () => {
-    clearInterval(refreshIntervalID);
-    gamepadIndex = null;
+    clearInterval(refreshIntervalID); // clear interval here
     setRefreshIntervalID(null);
+    gamepadIndex = null;
   }
   
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    //if gamepad exists do the following, else nothing
-    disableGamePad()
+    if (gamepad.connected == true) {
+      //if gamepad exists do the following, else nothing
+      disableGamePad()
+    }
     
 
   }
@@ -349,3 +355,5 @@ export const RideBehavior = () => {
     </Card>
   )
 }
+
+
