@@ -130,8 +130,8 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    clearInterval(refreshIntervalID)
-    setRefreshIntervalID(null);
+    //clearInterval(refreshIntervalID)
+    //setRefreshIntervalID(null);
   }
 
   switch (generation) {
