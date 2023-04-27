@@ -84,27 +84,25 @@ export const RideBehavior = () => {
     valid: rideTraitsValid,
   } = useRideTraits(generation)
   let rideModes = []
-
-
+  let gamepadIndex = undefined;
 ///
-  const [gamepadIndex, setGamepadIndex] = useState(null)
   const [refreshIntervalID, setRefreshIntervalID] = useState(null)
 
   const enableGamePad = () => {
-  window.addEventListener('gamepadconnected', (event) => {
-    setGamepadIndex(event.gamepad.index); // Update state using the hook
-    startInterval(event.gamepad.index);
-  })
-  window.addEventListener("gamepaddisconnected", (event) => {
-    console.log("Lost connection with the gamepad.");
-    setGamepadIndex(null); 
-    setRefreshIntervalID(null);
-    clearInterval(refreshIntervalID);
-  })
-  if (gamepadIndex !== undefined){
-    startInterval(gamepadIndex);
+    window.addEventListener('gamepadconnected', (event) => {
+      gamepadIndex = event.gamepad.index;
+      startInterval(gamepadIndex);
+    })
+    window.addEventListener("gamepaddisconnected", (event) => {
+      console.log("Lost connection with the gamepad.");
+      gamepadIndex = null;
+      setRefreshIntervalID(null);
+      clearInterval(refreshIntervalID)
+    })
+    if (gamepadIndex !== undefined){
+      startInterval(gamepadIndex);
+    }
   }
-}
 
   const startInterval = (gamepadIndex) => {
     const intervalId = setInterval(() => {
@@ -129,6 +127,8 @@ export const RideBehavior = () => {
       //if gamepad exists do the following, else nothing
       disableGamePad()
     }
+    
+
   }
 ///
   switch (generation) {
