@@ -85,29 +85,34 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
-  let refreshIntervalID;
+  var refreshIntervalID = null;
+  let remoteEnabled = false;
   
   ////
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
+      remoteEnabled = true;
     });
-
-    refreshIntervalID = setInterval(() => {
-      if(gamepadIndex !== undefined && refreshIntervalID !== 0) {
-        const myGamepad = navigator.getGamepads()[gamepadIndex];
-        console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
-        console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
-        setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
-      }
-    }, 100)
+    if (remoteEnabled) {
+      refreshIntervalID = setInterval(() => {
+        if(gamepadIndex !== undefined && refreshIntervalID !== 0) {
+          const myGamepad = navigator.getGamepads()[gamepadIndex];
+          console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
+          console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+          setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+        }
+      }, 100)
+    }
+    else {
+      console.log("controller disabled");
+    }
   }
 
   const disableGamePad = () => {
       window.addEventListener("gamepaddisconnected", (event) => {
       console.log("Lost connection with the gamepad.");
-      
     });
     
   }
@@ -115,12 +120,8 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    clearInterval(refreshIntervalID);
-    refreshIntervalID = 0;
-    window.removeEventListener('gamepadconnected', (event) => {
-      gamepadIndex = event.gamepad.index;
-      disableGamePad()
-    });
+    remoteEnabled = false;
+    
   }
 
   switch (generation) {
