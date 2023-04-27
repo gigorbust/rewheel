@@ -90,10 +90,11 @@ export const RideBehavior = () => {
   
   ////
   const enableGamePad = () => {
+    remoteEnabled = true;
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
-      remoteEnabled = true;
+      
     });
     if (remoteEnabled) {
       refreshIntervalID = setInterval(() => {
