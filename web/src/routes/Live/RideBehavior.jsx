@@ -117,6 +117,10 @@ export const RideBehavior = () => {
     showRemoteTilt(false)
     clearInterval(refreshIntervalID);
     refreshIntervalID = 0;
+    window.removeEventListener('gamepadconnected', (event) => {
+      gamepadIndex = event.gamepad.index;
+      disableGamePad()
+    });
   }
 
   switch (generation) {
