@@ -93,9 +93,13 @@ export const RideBehavior = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
-
+      startInterval(gamepadIndex)
     });
 
+    
+  }
+
+  const startInterval = (gamepadIndex) => {
     refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
@@ -115,7 +119,7 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    gamepad.connected = false;
+    clearInterval(refreshIntervalID)
   }
 
   switch (generation) {
