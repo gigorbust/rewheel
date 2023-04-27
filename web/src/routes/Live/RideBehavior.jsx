@@ -108,6 +108,7 @@ export const RideBehavior = () => {
     }
     else {
       console.log("controller disabled");
+      clearInterval(refreshIntervalID);
     }
   }
 
