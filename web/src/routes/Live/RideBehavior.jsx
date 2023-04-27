@@ -36,6 +36,7 @@ import { useState } from "react"
 import CloseIcon from "@mui/icons-material/Close"
 import { preventHorizontalKeyboardNavigation } from "../../utils"
 import { SplitButton } from "../../components/SplitButton"
+import React, { useState, useEffect } from 'react';
 
 const RideMapV1 = [
   RideMode.V1Classic,
@@ -85,17 +86,18 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
+  //const [refreshIntervalID, setRefreshIntervalID] = useState(null);
   useEffect(() => {
-  if (remoteTilt) {
-    if (refreshIntervalID === null) {
-      startInterval(gamepadIndex);
+    if (remoteTilt) {
+      if (refreshIntervalID === null) {
+        startInterval(gamepadIndex);
+      }
+    } else {
+      clearInterval(refreshIntervalID);
+      setRefreshIntervalID(null);
     }
-  } else {
-    clearInterval(refreshIntervalID);
-    setRefreshIntervalID(null);
-  }
-}, [remoteTilt]);
-
+  }, [remoteTilt]);
+  
 
   ////
   const enableGamePad = () => {
