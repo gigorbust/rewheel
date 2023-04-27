@@ -88,15 +88,6 @@ export const RideBehavior = () => {
   var refreshIntervalID = null;
 
 
-  var applyDeadzone = function(number, threshold){
-    percentage = (Math.abs(number) - threshold) / (1 - threshold);
- 
-    if(percentage < 0)
-       percentage = 0;
- 
-    return percentage * (number > 0 ? 1 : -1);
-  }
-
   ////
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
@@ -108,7 +99,7 @@ export const RideBehavior = () => {
     refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
-        setAngleOffset(applyDeadzone(-(((myGamepad.axes[1]) * 30 )/ 10), 0.25), true);
+        setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
       }
       
     }, 100)
