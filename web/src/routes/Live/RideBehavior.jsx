@@ -119,11 +119,6 @@ export const RideBehavior = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
     remoteEnabled = false;
-    gamepad.connected = false;
-    gamepad.exposed = false;
-    gamepad.index = null;
-    gamepadIndex = null;
-    
   }
 
   switch (generation) {
