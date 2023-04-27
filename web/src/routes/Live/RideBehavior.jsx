@@ -85,9 +85,10 @@ export const RideBehavior = () => {
     valid: rideTraitsValid,
   } = useRideTraits(generation)
   let rideModes = []
+  let gamepadIndex;
   
   const closeRemoteTilt = () => {
-    setAngleOffset(2.0, true)
+    setAngleOffset(0.0, true)
     showRemoteTilt(false)
   }
 
@@ -244,6 +245,22 @@ export const RideBehavior = () => {
               variant="outlined"
               onClick={() => {
                 showRemoteTilt(true)
+                
+                window.addEventListener('gamepadconnected', (event) => {
+                  gamepadIndex = event.gamepad.index;
+                });
+
+                // now print the axes on the connected gamepad, for example: 
+                setInterval(() => {
+                  if(gamepadIndex !== undefined) {
+                    // a gamepad is connected and has an index
+                    const myGamepad = navigator.getGamepads()[gamepadIndex];
+                    console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
+                    console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+                  }
+                }, 100)
+                
+                //setAngleOffset(0.0, true)
 
               }}
             >
