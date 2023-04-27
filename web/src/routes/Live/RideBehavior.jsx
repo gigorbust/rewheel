@@ -86,7 +86,7 @@ export const RideBehavior = () => {
   let rideModes = []
   let gamepadIndex;
   var refreshIntervalID = null;
-  const myGamepad = null;
+  var myGamepad = null;
 
   ////
   const enableGamePad = () => {
