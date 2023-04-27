@@ -32,11 +32,10 @@ import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn"
 import DoDisturbOffIcon from "@mui/icons-material/DoDisturbOff"
 import { useTheme } from "@emotion/react"
 import { useTranslation } from "react-i18next"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import CloseIcon from "@mui/icons-material/Close"
 import { preventHorizontalKeyboardNavigation } from "../../utils"
 import { SplitButton } from "../../components/SplitButton"
-import React, { useState, useEffect } from 'react'
 
 const RideMapV1 = [
   RideMode.V1Classic,
