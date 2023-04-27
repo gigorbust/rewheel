@@ -123,7 +123,7 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    if (gamepad.connected == true) {
+    if (gamepadIndex != 10) {
       //if gamepad exists do the following, else nothing
       disableGamePad()
     }
