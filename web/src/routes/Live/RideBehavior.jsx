@@ -86,7 +86,6 @@ export const RideBehavior = () => {
   let rideModes = []
   let gamepadIndex;
   var refreshIntervalID = null;
-  var myGamepad = null;
 
   ////
   const enableGamePad = () => {
@@ -114,6 +113,7 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
+    gamepad.connected = false;
   }
 
   switch (generation) {
