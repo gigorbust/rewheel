@@ -85,6 +85,7 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
+  let refreshIntervalID = null;
   //const [refreshIntervalID, setRefreshIntervalID] = useState(null);
   useEffect(() => {
     if (remoteTilt) {
