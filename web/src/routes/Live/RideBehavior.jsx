@@ -96,14 +96,14 @@ export const RideBehavior = () => {
     });
 
     refreshIntervalID = setInterval(() => {
-      if(remoteEnabled) {
+      if(gamepadIndex !== undefined && remoteEnabled) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
         console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
         setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
       }
       else {
-        
+        //clearInterval(refreshIntervalID);
         console.log("disabled.");
       }
       
