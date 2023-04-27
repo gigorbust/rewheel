@@ -13,8 +13,6 @@ import { FlasherPage } from "./routes/Flasher"
 import { HomePage } from "./routes/Home"
 import { LivePage } from "./routes/Live/LivePage"
 
-import { handleGamepadInput } from './routes/Live/ControllerSupport'
-
 
 import { BackupPage } from "./routes/Backup"
 
