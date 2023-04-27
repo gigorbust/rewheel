@@ -85,8 +85,9 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
 
+
 ///
-  let gamepadIndex = undefined;
+  const [gamepadIndex, setGamepadIndex] = useState(null)
   const [refreshIntervalID, setRefreshIntervalID] = useState(null)
 
   const enableGamePad = () => {
@@ -129,7 +130,6 @@ export const RideBehavior = () => {
       disableGamePad()
     }
   }
-
 ///
   switch (generation) {
     case BoardGeneration.V1:
