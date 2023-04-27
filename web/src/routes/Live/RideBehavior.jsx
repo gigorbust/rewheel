@@ -88,14 +88,26 @@ export const RideBehavior = () => {
 
   const [refreshIntervalID, setRefreshIntervalID] = useState(null);
   useEffect(() => {
+    let intervalId;
     if (remoteTilt) {
       if (refreshIntervalID === null) {
-        startInterval(gamepadIndex);
+        enableGamePad();
+        intervalId = setInterval(() => {
+          if(gamepadIndex !== undefined) {
+            const myGamepad = navigator.getGamepads()[gamepadIndex];
+            setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+          }
+        }, 100);
+        setRefreshIntervalID(intervalId);
       }
     } else {
       clearInterval(refreshIntervalID);
       setRefreshIntervalID(null);
     }
+    return () => {
+      clearInterval(intervalId);
+      setRefreshIntervalID(null);
+    };
   }, [remoteTilt]);
   
 
