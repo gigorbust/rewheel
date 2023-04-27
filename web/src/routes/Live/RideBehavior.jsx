@@ -108,7 +108,7 @@ export const RideBehavior = () => {
     refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
-        setAngleOffset(-(((applyDeadzone(myGamepad.axes[1], 0.25)) * 30 )/ 10), true);
+        setAngleOffset(applyDeadzone(-(((myGamepad.axes[1]) * 30 )/ 10), 0.25), true);
       }
       
     }, 100)
