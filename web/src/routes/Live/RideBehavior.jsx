@@ -94,6 +94,7 @@ export const RideBehavior = () => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
       startInterval(gamepadIndex)
+      window.removeEventListener('gamepadconnected', onGamepadConnected);
     });
 
     
@@ -103,7 +104,9 @@ export const RideBehavior = () => {
     const intervalId = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
-        setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+        if (myGamepad && myGamepad.connected) {
+          setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+        }
       }
     }, 100);
     setRefreshIntervalID(intervalId);
