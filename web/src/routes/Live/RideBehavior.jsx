@@ -85,7 +85,7 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
-  var refreshIntervalID = null;
+  const [refreshIntervalID, setRefreshIntervalID] = useState(null);
 
 
   ////
@@ -100,13 +100,13 @@ export const RideBehavior = () => {
   }
 
   const startInterval = (gamepadIndex) => {
-    refreshIntervalID = setInterval(() => {
+    const intervalId = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
       }
-      
-    }, 100)
+    }, 100);
+    setRefreshIntervalID(intervalId);
   }
 
   const disableGamePad = () => {
@@ -120,6 +120,7 @@ export const RideBehavior = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
     clearInterval(refreshIntervalID)
+    setRefreshIntervalID(null);
   }
 
   switch (generation) {
