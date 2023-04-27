@@ -99,6 +99,9 @@ export const RideBehavior = () => {
       setRefreshIntervalID(null);
       clearInterval(refreshIntervalID)
     })
+    if (gamepad !== null){
+      startInterval(gamepadIndex);
+    }
   }
 
   const startInterval = (gamepadIndex) => {
@@ -116,12 +119,6 @@ export const RideBehavior = () => {
     setRefreshIntervalID(null);
     gamepadIndex = null;
   }
-
-  const restartInterval = () => {
-    if (refreshIntervalID === null) {
-      startInterval(gamepadIndex);
-    }
-  };
   
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
@@ -286,7 +283,6 @@ export const RideBehavior = () => {
               onClick={() => {
                 showRemoteTilt(true)
                 enableGamePad()
-                restartInterval(gamepadIndex)
                 //setAngleOffset(0.0, true)
 
               }}
