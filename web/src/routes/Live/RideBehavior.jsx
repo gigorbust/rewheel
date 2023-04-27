@@ -120,6 +120,7 @@ export const RideBehavior = () => {
     showRemoteTilt(false)
     remoteEnabled = false;
     clearInterval(refreshIntervalID);
+    refreshIntervalID = 0
   }
 
   switch (generation) {
