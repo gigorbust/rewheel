@@ -126,6 +126,10 @@ export const RideBehavior = () => {
     showRemoteTilt(false)
     remoteEnabled = false;
     refreshIntervalID = 0;
+    gamepad.connected = false;
+    gamepad.exposed = false;
+    gamepad.index = null;
+    gamepadIndex = null;
     
   }
 
