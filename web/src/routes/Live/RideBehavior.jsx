@@ -86,15 +86,15 @@ export const RideBehavior = () => {
   let rideModes = []
   let gamepadIndex;
   
+  ////
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
+      disableGamePad()
     });
 
-    // now print the axes on the connected gamepad, for example: 
-    setInterval(() => {
+    var refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
-        // a gamepad is connected and has an index
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
         console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
@@ -104,18 +104,16 @@ export const RideBehavior = () => {
   }
 
   const disableGamePad = () => {
-    gamepad.connected = false;
       window.addEventListener("gamepaddisconnected", (event) => {
       console.log("Lost connection with the gamepad.");
+      clearInterval(refreshIntervalID);
     });
     
   }
+  ////
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    disableGamePad()
-    gamepadIndex = undefined;
-    
   }
 
   switch (generation) {
