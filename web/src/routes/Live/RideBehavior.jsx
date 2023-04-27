@@ -103,6 +103,7 @@ export const RideBehavior = () => {
         setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
         if (!remoteEnabled) {
           clearInterval(refreshIntervalID);
+          console.log("disabled.");
         }
       }
     }, 100)
