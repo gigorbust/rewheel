@@ -91,9 +91,11 @@ export const RideBehavior = () => {
   ////
   const enableGamePad = () => {
     remoteEnabled = true;
+    refreshIntervalID = null;
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
       disableGamePad()
+      
       
     });
     if (remoteEnabled) {
@@ -123,6 +125,7 @@ export const RideBehavior = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
     remoteEnabled = false;
+    refreshIntervalID = 0;
     
   }
 
