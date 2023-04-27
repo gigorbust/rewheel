@@ -103,7 +103,7 @@ export const RideBehavior = () => {
         setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
       }
       else {
-        clearInterval(refreshIntervalID);
+        
         console.log("disabled.");
       }
       
