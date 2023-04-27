@@ -99,7 +99,7 @@ export const RideBehavior = () => {
       setRefreshIntervalID(null);
       clearInterval(refreshIntervalID)
     })
-    if (gamepad !== null){
+    if (gamepadIndex !== null){
       startInterval(gamepadIndex);
     }
   }
