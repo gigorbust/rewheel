@@ -106,7 +106,7 @@ export const RideBehavior = () => {
   const disableGamePad = () => {
       window.addEventListener("gamepaddisconnected", (event) => {
       console.log("Lost connection with the gamepad.");
-      clearInterval(refreshIntervalID);
+      
     });
     
   }
@@ -114,6 +114,7 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
+    clearInterval(refreshIntervalID);
   }
 
   switch (generation) {
