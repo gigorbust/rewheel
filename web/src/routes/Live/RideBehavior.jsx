@@ -36,7 +36,7 @@ import { useState } from "react"
 import CloseIcon from "@mui/icons-material/Close"
 import { preventHorizontalKeyboardNavigation } from "../../utils"
 import { SplitButton } from "../../components/SplitButton"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const RideMapV1 = [
   RideMode.V1Classic,
