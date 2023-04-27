@@ -103,10 +103,19 @@ export const RideBehavior = () => {
       }
     }, 100)
   }
+
+  const disableGamePad = () => {
+    gamepad.connected = false;
+      window.addEventListener("gamepaddisconnected", (event) => {
+      console.log("Lost connection with the gamepad.");
+    });
+    
+  }
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    gamepadIndex == undefined;
+    disableGamePad()
+    gamepadIndex = undefined;
     
   }
 
