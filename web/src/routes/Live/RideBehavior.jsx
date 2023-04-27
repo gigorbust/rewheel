@@ -92,18 +92,13 @@ export const RideBehavior = () => {
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
-      myGamepad = navigator.getGamepads()[gamepadIndex];
       disableGamePad()
     });
 
     refreshIntervalID = setInterval(() => {
       if(gamepadIndex !== undefined) {
-        //console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
-        //console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+        const myGamepad = navigator.getGamepads()[gamepadIndex];
         setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
-        if (myGamepad == null) {
-          clearInterval(refreshIntervalID);
-        }
       }
       
     }, 100)
@@ -119,10 +114,6 @@ export const RideBehavior = () => {
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    clearInterval(refreshIntervalID);
-    refreshIntervalID = 0
-    gamepadIndex = null;
-    myGamepad = null;
   }
 
   switch (generation) {
