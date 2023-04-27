@@ -115,16 +115,16 @@ export const RideBehavior = () => {
     gamepadIndex = null;
     setRefreshIntervalID(null);
   }
-  ////
+  
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    disableGamePad()
     //if gamepad exists do the following, else nothing
-    clearInterval(refreshIntervalID)
-    setRefreshIntervalID(null)
-  }
+    disableGamePad()
+    
 
+  }
+///
   switch (generation) {
     case BoardGeneration.V1:
     case BoardGeneration.V1_2:
