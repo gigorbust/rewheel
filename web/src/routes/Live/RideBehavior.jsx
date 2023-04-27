@@ -85,41 +85,19 @@ export const RideBehavior = () => {
   } = useRideTraits(generation)
   let rideModes = []
   let gamepadIndex;
+///
+  const [refreshIntervalID, setRefreshIntervalID] = useState(null)
 
-  const [refreshIntervalID, setRefreshIntervalID] = useState(null);
-  useEffect(() => {
-    let intervalId;
-    if (remoteTilt) {
-      if (refreshIntervalID === null) {
-        enableGamePad();
-        intervalId = setInterval(() => {
-          if(gamepadIndex !== undefined) {
-            const myGamepad = navigator.getGamepads()[gamepadIndex];
-            setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
-          }
-        }, 100);
-        setRefreshIntervalID(intervalId);
-      }
-    } else {
-      clearInterval(refreshIntervalID);
-      setRefreshIntervalID(null);
-    }
-    return () => {
-      clearInterval(intervalId);
-      setRefreshIntervalID(null);
-    };
-  }, [remoteTilt]);
-  
-
-  ////
   const enableGamePad = () => {
     window.addEventListener('gamepadconnected', (event) => {
       gamepadIndex = event.gamepad.index;
-      disableGamePad()
-      startInterval(gamepadIndex)
-    });
-
-    
+      startInterval(gamepadIndex);
+    })
+    window.addEventListener("gamepaddisconnected", (event) => {
+      console.log("Lost connection with the gamepad.");
+      gamepadIndex = null;
+      setRefreshIntervalID(null);
+    })
   }
 
   const startInterval = (gamepadIndex) => {
@@ -133,17 +111,18 @@ export const RideBehavior = () => {
   }
 
   const disableGamePad = () => {
-      window.addEventListener("gamepaddisconnected", (event) => {
-      console.log("Lost connection with the gamepad.");
-    });
-    
+    clearInterval(refreshIntervalID);
+    gamepadIndex = null;
+    setRefreshIntervalID(null);
   }
   ////
   const closeRemoteTilt = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
-    //clearInterval(refreshIntervalID)
-    //setRefreshIntervalID(null);
+    disableGamePad()
+    //if gamepad exists do the following, else nothing
+    clearInterval(refreshIntervalID)
+    setRefreshIntervalID(null)
   }
 
   switch (generation) {
