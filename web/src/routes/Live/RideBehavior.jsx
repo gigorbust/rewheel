@@ -95,7 +95,7 @@ export const RideBehavior = () => {
     });
 
     refreshIntervalID = setInterval(() => {
-      if(gamepadIndex !== undefined) {
+      if(gamepadIndex !== undefined && refreshIntervalID !== 0) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
         console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
@@ -116,6 +116,7 @@ export const RideBehavior = () => {
     setAngleOffset(0.0, true)
     showRemoteTilt(false)
     clearInterval(refreshIntervalID);
+    refreshIntervalID = 0;
   }
 
   switch (generation) {
