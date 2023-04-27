@@ -87,7 +87,7 @@ export const RideBehavior = () => {
   let rideModes = []
   
   const closeRemoteTilt = () => {
-    setAngleOffset(0.0, true)
+    setAngleOffset(2.0, true)
     showRemoteTilt(false)
   }
 
@@ -244,6 +244,7 @@ export const RideBehavior = () => {
               variant="outlined"
               onClick={() => {
                 showRemoteTilt(true)
+
               }}
             >
               {t("rideBehavior.customShaping.remoteTilt")}
