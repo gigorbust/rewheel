@@ -116,7 +116,7 @@ export const RideBehavior = () => {
         if (offset !== 0){
           setAngleOffset(-offset, true);
         } else {
-          setAngleOffset(0.0, true);
+          setAngleOffset(1, true);
         }
       } 
     }, 100);
