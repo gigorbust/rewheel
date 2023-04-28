@@ -114,9 +114,11 @@ export const RideBehavior = () => {
         const threshold = 0.25;
         const offset = Math.abs(triggerDiff) < threshold ? 0 : (triggerDiff * 15)/10;
         if (offset !== 0){
-          setAngleOffset(-offset, true);
+          setAngleOffset(-offset, true, generation !== BoardGeneration.XR);
         } else {
-          setAngleOffset(1, true);
+          setAngleOffset(0.0,
+            true,
+            generation !== BoardGeneration.XR)
         }
       } 
     }, 100);
