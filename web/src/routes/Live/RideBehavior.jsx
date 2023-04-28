@@ -108,11 +108,15 @@ export const RideBehavior = () => {
     const intervalId = setInterval(() => {
       if(gamepadIndex !== undefined) {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
-        setAngleOffset(-(((myGamepad.axes[1]) * 30 )/ 10), true);
+        const leftTrigger = myGamepad.buttons[6].value;
+        const rightTrigger = myGamepad.buttons[7].value;
+        const offset = (rightTrigger - leftTrigger) * 30;
+        setAngleOffset(-offset, true);
       }
     }, 100);
     setRefreshIntervalID(intervalId);
   }
+  
 
   const disableGamePad = () => {
     clearInterval(refreshIntervalID); // clear interval here
