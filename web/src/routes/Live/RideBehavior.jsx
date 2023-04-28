@@ -110,7 +110,7 @@ export const RideBehavior = () => {
         const myGamepad = navigator.getGamepads()[gamepadIndex];
         const leftTrigger = myGamepad.buttons[6].value;
         const rightTrigger = myGamepad.buttons[7].value;
-        const offset = (rightTrigger - leftTrigger) * 30;
+        const offset = ((rightTrigger - leftTrigger) * 30) / 10;
         setAngleOffset(-offset, true);
       }
     }, 100);
