@@ -112,11 +112,13 @@ export const RideBehavior = () => {
         const rightTrigger = myGamepad.buttons[7].value;
         const triggerDiff = rightTrigger - leftTrigger;
         const threshold = 0.25;
-        const offset = Math.abs(triggerDiff) < threshold ? 0 : (triggerDiff * 30)/10;
-        setAngleOffset(-offset, true);
-      } else {
-        setAngleOffset(0.0, true);
-      }
+        const offset = Math.abs(triggerDiff) < threshold ? 0 : (triggerDiff * 15)/10;
+        if (offset !== 0){
+          setAngleOffset(-offset, true);
+        } else {
+          setAngleOffset(0.0, true);
+        }
+      } 
     }, 100);
     setRefreshIntervalID(intervalId);
   }
