@@ -11,6 +11,7 @@ export { spoofAsXR } from "./spoofAsXR.js"
 export { setTopSpeed } from './setTopSpeed.js'
 export { remoteTilt } from './remoteTilt.js'
 export { removeBmsOOB } from './removeBmsOOB.js'
+export { sensorPosi } from './sensorPosi.js'
 export { estimateSoc } from './estimateSoc.js'
 export { gtShapingBoost } from './gtShapingBoost.js'
 // export { setAngleOffset } from "./setAngleOffset.js"
