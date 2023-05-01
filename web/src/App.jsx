@@ -40,7 +40,7 @@ const navigationItems = [
 
 const otherItems = [
   {
-    path: "https://github.com/rewheel-app/rewheel",
+    path: "https://github.com/Camwp/rewheel-main",
     label: "contribute",
     icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
   },

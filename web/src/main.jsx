@@ -23,6 +23,22 @@ import { registerSW } from "virtual:pwa-register"
 import { AboutPage } from "./routes/About"
 registerSW({ immediate: true })
 
+
+const express = require('express');
+const app = express();
+
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://steep-hall-7174.on.fleek.co/',
+'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
+
+app.get('/', (req, res) => {
+  res.send('All my data”')
+})
+
+
 const router = createBrowserRouter([
   {
     path: "/",
