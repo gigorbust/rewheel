@@ -37,7 +37,7 @@ export const Backup = () => {
         generation ??
         inferBoardFromHardwareRevision(hardwareRevision).toLowerCase()
       const response = await fetch(
-        `/${generation}-signed-extractor.bin`
+        `assets/${generation}-signed-extractor.bin`
       )
 
       const data = await response.arrayBuffer()
