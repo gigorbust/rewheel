@@ -98,22 +98,6 @@ estimateSoc:
   errors:
     notANumber: Invalid battery capacity value
     outOfRange: Battery capacity out of accepted range
-sensorPosi:
-  name: Posi Sensor When Mounting
-  description: Convert the footpad to be single-zone until shortly after you engage the motor. Also lets you customize motor disegagment time when your foot leaves the sensor.
-  confirmation: "WARNING: Using this patch (especially with a defective footpad!) could increase the likelyhood of ghosting"
-  args:
-    revertTime:
-      name: Revert Time
-      description: "Time after motor engagment until your sensor revert to two-zones (Default: 3000)"
-    disengageTime:
-      name: Disengagement Time
-      description: "Time it takes for motor to disegage when your foot leaves the sensor (Default: 256)"
-  errors:
-    revertTimeOutOfRange: Revert time is out of accepted range
-    disengageTimeOutOfRange: Disengagement time is out of accepted range
-    revertTimeNotANumber: Invalid revert time
-    disengageTimeNotANumber: Invalid disengagement time
 remoteTilt:
   name: Remote Tilt
   description: Let's you use ReWheel or a custom app to change the angle of your board while riding
