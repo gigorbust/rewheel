@@ -37,7 +37,7 @@ export const Backup = () => {
         generation ??
         inferBoardFromHardwareRevision(hardwareRevision).toLowerCase()
       const response = await fetch(
-        `https://github.com/Camwp/rewheel-main/tree/master/web/public/src/assets/${generation}-signed-extractor.bin`)
+        `/${generation}-signed-extractor.bin`)
 
       const data = await response.arrayBuffer()
       setFirmware(data)
