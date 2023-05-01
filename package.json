@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "name": "@rewheel/rewheel",
   "version": "0.1.0",
   "description": "Firmware modification tools for OneWheel Pint, Pint X, and XR",
