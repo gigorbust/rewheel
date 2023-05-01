@@ -30,7 +30,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'https://steep-hall-7174.on.fleek.co/',
+  origin: 'https://steep-hall-7174.on.fleek.co',
 'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
