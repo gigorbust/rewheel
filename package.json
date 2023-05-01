@@ -9,7 +9,8 @@
   "scripts": {
     "patcher": "yarn workspace @rewheel/cli start",
     "web:dev": "yarn workspace @rewheel/web dev",
-    "web:build": "yarn workspace @rewheel/web build && cp web/_redirects web/dist/_redirects"
+    "web:build": "yarn workspace @rewheel/web build && cp web/_redirects web/dist/_redirects",
+    "build": "react-scripts build"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
