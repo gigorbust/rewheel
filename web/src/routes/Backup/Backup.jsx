@@ -37,7 +37,7 @@ export const Backup = () => {
         generation ??
         inferBoardFromHardwareRevision(hardwareRevision).toLowerCase()
       const response = await fetch(
-        `${FUNCTIONS_BASE}.netlify/functions/extractor?generation=${generation}`
+        `/${generation}-signed-extractor.bin`
       )
 
       const data = await response.arrayBuffer()
