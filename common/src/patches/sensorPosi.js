@@ -73,7 +73,7 @@ export const sensorPosi = {
     if (isNaN(revertTime))
       throw "revertTimeNotANumber"
 
-    if (revertTime < 0 || revertTime > 20000)
+    if (revertTime < 0 || revertTime > 65535)
       throw "revertTimeOutOfRange"
 
 //     disengageTime = parseInt(disengageTime)
