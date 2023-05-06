@@ -59,7 +59,7 @@ export const sensorPosi = {
       required: true,
       type: 'number',
       min: 0,
-      max: 20000,
+      max: 65535,
     },
 //     disengageTime: {
 //       required: true,
