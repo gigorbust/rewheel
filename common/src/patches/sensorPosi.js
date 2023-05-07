@@ -96,7 +96,8 @@ export const sensorPosi = {
         },
         // TODO: This needs to use disengageTime to create a `mov.w rX, #disengageTime` instruction
         // GT uses register r4, Pint uses r0
-        data: [isGT ? 0xB4 : 0xB0, 0xF5, 0xC0, 0x7F]
+        data: [isGT ? 0xB4 : 0xB0, 0xF5, 0x00, 0x7F]
+//        data: [isGT ? 0xB4 : 0xB0, 0xF5, 0xC0, 0x7F]
       },
       { // Push registers onto stack
         start: {
