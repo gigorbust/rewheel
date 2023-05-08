@@ -40,7 +40,7 @@ const navigationItems = [
 
 const otherItems = [
   {
-    path: "/#",
+    path: "https://github.com/ffmwheel/rewheel-main",
     label: "contribute",
     icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
   },
