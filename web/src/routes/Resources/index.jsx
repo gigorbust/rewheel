@@ -39,6 +39,7 @@ export const ResourcesPage = () => {
                 <ListItemText
                   primary={source}
                   secondary={resources[source]?.sourceLink ?? ""}
+                  sx={{ wordBreak: 'break-word' , whitespace: 'normal'}}
                 />
               </ListItemButton>
             </ListItem>
