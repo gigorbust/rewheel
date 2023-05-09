@@ -36,6 +36,7 @@ const navigationItems = [
   { path: "/live", label: "navigation.live" },
   { path: "/extras", label: "navigation.extras" },
   { path: "/about", label: "navigation.about" },
+  { path: "/about", label: "Resources (New)" },
 ]
 
 const otherItems = [
