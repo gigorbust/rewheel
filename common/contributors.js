@@ -12,8 +12,6 @@ export const contributors = {
   },
   Sundaii: {
     "github": "https://www.github.com/camwp",
-    "BTC": "bc1qrfencn7ncjg7v605sxfxsremtgea0l6eksshzx",
-    "ETH": "0x60929dec08A1956F853a18F018b3920c974Ef874",
-    "Matic(Polygon)": "0x60929dec08A1956F853a18F018b3920c974Ef874"
+    "sponsor": "https://ud.me/0xsundaii.crypto"
   }
 }
