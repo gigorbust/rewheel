@@ -1,14 +1,14 @@
 export const resources = {
-  Source1: {
-    "sourceLink": "testlink"
+  "FFMWheel Instructions": {
+    "sourceLink": "https://www.fixmypev.com/diy/onewheel/rewheel/"
   },
-  Source2: {
-    "sourceLink": "testlink"
+  "Shadowwheel(Local version)": {
+    "sourceLink": "https://mega.nz/file/SRpSHAIC"
   },
-  Source3: {
-    "sourceLink": "testlink"
+  "ReWheel Discord": {
+    "sourceLink": "https://discord.gg/RA92S5Tx6g"
   },
-  Source4: {
-    "sourceLink": "testlink"
+  "FixMyPev Discord": {
+    "sourceLink": "https://discord.gg/2TT7PTfdhC"
   }
 }
