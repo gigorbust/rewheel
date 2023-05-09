@@ -22,7 +22,7 @@ import "./i18n"
 import { registerSW } from "virtual:pwa-register"
 import { AboutPage } from "./routes/About"
 import { ResourcesPage } from "./routes/Resources"
-registerSW({ immediate: true })
+registerSW({ immediate: true } )
 
 const router = createBrowserRouter([
   {
