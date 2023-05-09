@@ -21,6 +21,7 @@ import "./i18n"
 
 import { registerSW } from "virtual:pwa-register"
 import { AboutPage } from "./routes/About"
+import { ResourcesPage } from "./routes/Resources"
 registerSW({ immediate: true })
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/resources",
+        element: <ResourcesPage />,
       },
     ],
   },
