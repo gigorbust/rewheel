@@ -1,14 +1,14 @@
 export const resources = {
   Source1: {
-    "sourceLink": "https://ud.me/0xsundaii.crypto"
+    "sourceLink": "testlink"
   },
   Source2: {
-    "sourceLink": "https://ud.me/0xsundaii.crypto"
+    "sourceLink": "testlink"
   },
   Source3: {
-    "sourceLink": "https://ud.me/0xsundaii.crypto"
+    "sourceLink": "testlink"
   },
   Source4: {
-    "sourceLink": "https://ud.me/0xsundaii.crypto"
+    "sourceLink": "testlink"
   }
 }
