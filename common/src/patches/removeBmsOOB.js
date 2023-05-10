@@ -2,7 +2,7 @@ import { padNops } from "../utils/helpers.js"
 
 export const removeBmsOOB = {
   attribution: [
-    "outlandnish"
+    
   ],
   priority: 1,
   description: "Removes Out of Band communication to the BMS that causes Error 24",
