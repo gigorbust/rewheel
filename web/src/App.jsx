@@ -31,7 +31,7 @@ import { useTranslation } from "react-i18next"
 
 const navigationItems = [
   { path: "/backup", label: "navigation.backup" },
-  { path: "/extras", label: "navigation.extract key" },
+  { path: "/extras", label: "navigation.extract" },
   { path: "/patch", label: "navigation.patch" },
   { path: "/flash", label: "navigation.flash" },
   { path: "/live", label: "navigation.live" },
