@@ -35,11 +35,13 @@ const navigationItems = [
   { path: "/patch", label: "navigation.patch" },
   { path: "/flash", label: "navigation.flash" },
   { path: "/live", label: "navigation.live" },
-  { path: "/resources", label: "Resources" },
 ]
 
 const otherItems = [
   {
+    path: "/resources",
+    label: "Resources",
+    icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
   },
 ]
 
