@@ -55,10 +55,6 @@ const router = createBrowserRouter([
         element: <LivePage />,
       },
       {
-        path: "/about",
-        element: <AboutPage />,
-      },
-      {
         path: "/resources",
         element: <ResourcesPage />,
       },
