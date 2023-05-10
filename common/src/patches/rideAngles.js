@@ -39,7 +39,7 @@ export const getAngleAndBackwardAngle = (angle, backwardAngle) => {
 export const changeElevatedAngle = {
   priority: 0,
   attribution: [
-    "outlandnish"
+    
   ],
   supported: allPreGTGenerations,
   args: {
