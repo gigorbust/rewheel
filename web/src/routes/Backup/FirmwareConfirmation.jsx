@@ -12,11 +12,15 @@ import {
 } from "@rewheel/common/src/utils/checksum"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { useFirmwareLoader } from "../../hooks/useFirmwareLoader"
+import { useFirmwareLoaderBackup } from "../../hooks/useFirmwareLoaderBackup"
 
 export const FirmwareConfirmation = ({ onHasValidOTA }) => {
   const { t } = useTranslation("backup")
-  const { firmware, showFirmwareInput } = useFirmwareLoader()
+  const {
+    firmware,
+    selectGTFile,
+    selectPintFile,
+  } = useFirmwareLoaderBackup()
   const [haltBackup, setHaltBackup] = useState(false)
 
   useEffect(() => {
@@ -39,7 +43,12 @@ export const FirmwareConfirmation = ({ onHasValidOTA }) => {
           <Typography variant="body1" sx={{ mb: 2 }}>
             {t("confirmation.description")}
           </Typography>
-          {showFirmwareInput()}
+          <Button variant="contained" sx={{ margin: '0 1rem 0 0' }} onClick={selectGTFile}>
+            GT Firmware [6109]
+          </Button>
+          <Button variant="contained" onClick={selectPintFile}>
+            Pint Firmware [5040]
+          </Button>
           <Typography variant="body1" sx={{ mt: 2 }}>
             {haltBackup && t("confirmation.haltBackup")}
           </Typography>
@@ -48,3 +57,4 @@ export const FirmwareConfirmation = ({ onHasValidOTA }) => {
     </Box>
   )
 }
+

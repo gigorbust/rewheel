@@ -8,6 +8,7 @@ export {
 } from "./useBattery"
 export { useBLECharacteristic, bleQueue } from "./useBLECharacteristic"
 export { useFirmwareLoader } from "./useFirmwareLoader"
+export { useFirmwareLoaderBackup } from "./useFirmwareLoaderBackup"
 export { useLights } from "./useLights"
 export {
   RidingTrait,
