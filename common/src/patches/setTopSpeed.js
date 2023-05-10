@@ -3,8 +3,7 @@ import { encodeThumbMovWInstruction } from "../utils/helpers.js"
 
 export const setTopSpeed = {
   attribution: [
-    "outlandnish",
-    "exPHAT"
+    
   ],
   priority: 1,
   description: `Sets the top speed before pushback`,
