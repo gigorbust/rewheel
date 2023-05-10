@@ -4,8 +4,7 @@ const patchCustomShapingForGT = "dff8bc0138443844dff85811098876b20680dff8ac01fef
 
 export const enableCustomShaping = {
   attribution: [
-    "outlandnish",
-    "exPHAT"
+    
   ],
   priority: 0,
   supported: [5, 6, 7],
