@@ -3,7 +3,7 @@ import { printArgs } from "../utils/helpers.js"
 
 export const setAngleOffset = {
   attribution: [
-    "outlandnish"
+    
   ],
   priority: 0,
   supported: allGenerations,
