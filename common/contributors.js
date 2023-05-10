@@ -1,11 +1,5 @@
 export const contributors = {
-  YourMom69420: {
-    
-  },
-  "Kyle DORKsen": {
-    
-  },
-  "iridociclitis": {
-    
+  "Cool facts about sloths - Thanks ffm": {
+    "sponsor": "https://slothconservation.org/10-incredible-facts-about-the-sloth/"
   }
 }
