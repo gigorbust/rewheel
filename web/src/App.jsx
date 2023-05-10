@@ -31,11 +31,11 @@ import { useTranslation } from "react-i18next"
 
 const navigationItems = [
   { path: "/backup", label: "navigation.backup" },
-  { path: "/extras", label: "navigation.extract" },
+  { path: "/extras", label: "Extract Key" },
   { path: "/patch", label: "navigation.patch" },
   { path: "/flash", label: "navigation.flash" },
   { path: "/live", label: "navigation.live" },
-  { path: "/resources", label: "Resources (New)" },
+  { path: "/resources", label: "Resources" },
 ]
 
 const otherItems = [
