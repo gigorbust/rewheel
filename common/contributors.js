@@ -1,17 +1,11 @@
 export const contributors = {
-  outlandnish: {
-    "github": "https://github.com/outlandnish",
-    "sponsor": "https://github.com/sponsors/outlandnish"
+  YourMom69420: {
+    
   },
-  exPHAT: {
-    "github": "https://github.com/exphat",
-    "sponsor": "https://paypal.me/exphat"
+  "Kyle DORKsen": {
+    
   },
-  lolwheel: {
-    "github": "https://github.com/lolwheel"
-  },
-  Sundaii: {
-    "github": "https://www.github.com/camwp",
-    "sponsor": "https://ud.me/0xsundaii.crypto"
+  "iridociclitis": {
+    
   }
 }
