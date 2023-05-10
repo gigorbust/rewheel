@@ -6,7 +6,6 @@ export const ExtrasPage = () => {
       <Stack spacing={2} direction="column">
         <KeyExtraction />
         {/* <OTADownloader /> */}
-        //<OTAConverter />
       </Stack>
     </Box>
   )
