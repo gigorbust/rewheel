@@ -35,20 +35,11 @@ const navigationItems = [
   { path: "/flash", label: "navigation.flash" },
   { path: "/live", label: "navigation.live" },
   { path: "/extras", label: "navigation.extras" },
-  { path: "/about", label: "navigation.about" },
   { path: "/resources", label: "Resources (New)" },
 ]
 
 const otherItems = [
   {
-    path: "https://github.com/ffmwheel/rewheel-main",
-    label: "contribute",
-    icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
-  },
-  {
-    path: "/about",
-    label: "donate",
-    icon: <FavoriteIcon color="error" sx={{ mx: 1 }} />,
   },
 ]
 
