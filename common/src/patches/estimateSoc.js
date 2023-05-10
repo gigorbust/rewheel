@@ -43,7 +43,7 @@ export const estimateSoc = {
   priority: 3,
   description: `Estimates the state of charge via battery voltage and capacity`,
   attribution: [
-    "exPHAT"
+    
   ],
   supported: allGenerations,
   supportsOta: true,
