@@ -1,6 +1,6 @@
 export const showDutyCycle = {
   attribution: [
-    "lolwheel"
+    
   ],
   priority: 1,
   description: 'Reports duty cycle instead of yaw over Bluetooth',
