@@ -3,8 +3,7 @@ import { padNops } from "../utils/helpers.js"
 
 export const removeBleHandshakeCheck = {
   attribution: [
-    "lolwheel",
-    "outlandnish"
+    
   ],
   priority: 0,
   supported: allGenerations,
