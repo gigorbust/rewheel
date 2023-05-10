@@ -3,8 +3,7 @@ import { nop, padNops } from "../utils/helpers.js"
 
 export const removeBmsIDCheck = {
   attribution: [
-    "lolwheel",
-    "outlandnish"
+    
   ],
   priority: 0,
   supported: allGenerations.filter(generation => generation !== BoardGeneration.GT),
