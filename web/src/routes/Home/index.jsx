@@ -19,7 +19,7 @@ const GetStarted = ({ startOnboarding, skipIntro }) => (
     <CardActionArea onClick={startOnboarding}>
       <CardHeader
         title="Get Started"
-        subheader="New to Rewheel modifications? Start here"
+        subheader="New to FFMWheel modifications? Start here"
       />
     </CardActionArea>
     <CardActions>
@@ -62,7 +62,7 @@ export const HomePage = () => {
       <Typography variant="body2">{t("warningMessage")}</Typography>
       <Typography variant="body2">
         <Trans t={t} i18nKey="discordLink">
-          x<a href="https://discord.gg/kgBeNWMqZn">Rewheel Discord</a>
+          
         </Trans>
       </Typography>
 
