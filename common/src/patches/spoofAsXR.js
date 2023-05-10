@@ -2,7 +2,7 @@ import { BoardGeneration } from "../utils/board.js"
 
 export const spoofAsXR = {
   attribution: [
-    "exPHAT",
+    
   ],
   priority: 3,
   supported: [BoardGeneration.Pint, BoardGeneration.GT],
