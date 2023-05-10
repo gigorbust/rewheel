@@ -112,7 +112,7 @@ export const increasePintAggressiveness = [
 
 export const convertPintModeBehaviorToXR = {
   attribution: [
-    "outlandnish"
+    
   ],
   priority: 0,
   supported: [5],
