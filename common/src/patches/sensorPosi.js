@@ -47,7 +47,7 @@ export const sensorPosi = {
   priority: 3,
   description: `Convert sensor to single zone when mounting`,
   attribution: [
-    "exPHAT"
+    
   ],
   supported: [BoardGeneration.Pint, BoardGeneration.GT],
   supportsOta: true,
