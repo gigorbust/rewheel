@@ -44,7 +44,7 @@ export const remoteTilt = {
   priority: 3,
   description: `Convert custom shaping tilt into live remote tilt`,
   attribution: [
-    "exPHAT"
+    
   ],
   supported: [BoardGeneration.Pint, BoardGeneration.GT],
   supportsOta: true,
