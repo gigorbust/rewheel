@@ -33,7 +33,7 @@ const navigationItems = [
   { path: "/backup", label: "navigation.backup" },
   { path: "/patch", label: "navigation.patch" },
   { path: "/flash", label: "navigation.flash" },
-  { path: "/extras", label: "navigation.extras" },
+  { path: "/extras", label: "navigation.extract key" },
   { path: "/live", label: "navigation.live" },
   { path: "/resources", label: "Resources (New)" },
 ]
