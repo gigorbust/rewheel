@@ -2,7 +2,7 @@ import { BoardGeneration } from "../utils/board.js"
 
 export const gtShapingBoost = {
   attribution: [
-    "exPHAT",
+    
   ],
   priority: 3,
   supported: [BoardGeneration.GT],
