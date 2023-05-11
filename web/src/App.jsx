@@ -44,7 +44,7 @@ const otherItems = [
     icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
   },
   {
-    path: "https://ud.me/0xsundaii.crypto",
+    path: "https://ud.me/ffmwheel.blockchain",
     label: "Donate",
     icon: <FavoriteIcon color="error" sx={{ mx: 1 }} />,
   },
