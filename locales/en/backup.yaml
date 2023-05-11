@@ -6,8 +6,8 @@ unableToLoadExtractor: Unable to load extractor
 unableToDetermineBoard: Unable to determine board. Please select below
 confirmation:
   title: Confirm OTA Firmware
-  subtitle: Please confirm you have firmware matching one of these valid OTA files before you continue
-  description: Because FM no longer hosts valid OTA updates, you will need to confirm which valid firmware to use before proceeding with the backup. Otherwise, your board will be bricked and unusable.
+  subtitle: Confirm your board has one of the firmware versions below.
+  description: Please confirm which valid firmware to use before proceeding with the backup.
   haltBackup: Sorry, you cannot continue backup at this time. You will need a valid OTA file before you can proceed.
 dumper:
   extractor: Extractor
