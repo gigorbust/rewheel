@@ -43,6 +43,11 @@ const otherItems = [
     label: "Resources",
     icon: <CodeIcon color="white" sx={{ mx: 1 }} />,
   },
+  {
+    path: "https://ud.me/0xsundaii.crypto",
+    label: "Donate",
+    icon: <FavoriteIcon color="error" sx={{ mx: 1 }} />,
+  },
 ]
 
 function App() {
