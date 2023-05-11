@@ -100,7 +100,7 @@ estimateSoc:
     outOfRange: Battery capacity out of accepted range
 sensorPosi:
   name: Posi Sensor When Mounting
-  description: Convert the footpad to be single-zone until shortly after you engage the motor. Also lets you customize motor disegagment time when your foot leaves the sensor.
+  description: Convert the footpad to be single-zone until shortly after you engage the motor. Also changes motor disegagment time when your ENTIRE foot leaves the sensor by +50%. Heel lift is not affected.
   confirmation: "WARNING: Using this patch (especially with a defective footpad!) could increase the likelyhood of ghosting"
   args:
     revertTime:
