@@ -3,7 +3,7 @@
 Firmware modification tools for the Onewheel Pint, Pint X, XR and GT. Part of the R2Row ('Arturo') project.
 
 > [!IMPORTANT]
-> Hosted at (https://autumn-bar-0505.on.fleek.co/)[https://autumn-bar-0505.on.fleek.co/]
+> Hosted at [https://autumn-bar-0505.on.fleek.co/](https://autumn-bar-0505.on.fleek.co/)
 
 _Note: The documentation below is for developers. If you just want to re-calibrate your board or patch some firmware, please use the address above._
 
