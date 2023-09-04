@@ -2,12 +2,15 @@
 
 Firmware modification tools for the Onewheel Pint, Pint X, XR and GT. Part of the R2Row ('Arturo') project.
 
-_Note: The documentation below is for developers. If you just want to re-calibrate your board or patch some firmware, please use https://rewheel.app._
+> [!IMPORTANT]
+> Hosted at [https://autumn-bar-0505.on.fleek.co/](https://autumn-bar-0505.on.fleek.co/)
+
+_Note: The documentation below is for developers. If you just want to re-calibrate your board or patch some firmware, please use the address above._
 
 ## Requirements
 
 - Node.js
-- Yarn 2+ (`yarn set version stable` if you have an Yarn 1.x) 
+- Yarn 2+ (`yarn set version stable` if you have an Yarn 1.x)
 
 ## Installation
 
